@@ -1,0 +1,103 @@
+:root {
+  --neon-blue: #00f3ff;
+  --neon-purple: #bc13fe;
+  --bg-dark: #050510;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-dark);
+  color: #fff;
+}
+
+.app-root {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #1a1a2e 0%, #000000 100%);
+}
+
+/* Moving Orbs */
+.glowing-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.orb-1 {
+  width: 300px;
+  height: 300px;
+  background: var(--neon-purple);
+  top: 10%;
+  left: 20%;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--neon-blue);
+  bottom: 10%;
+  right: 10%;
+}
+
+/* Glass Card */
+.app-card {
+  background: rgba(20, 20, 40, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(0, 243, 255, 0.1);
+}
+
+.app-title {
+  font-weight: 800;
+  background: linear-gradient(to right, var(--neon-blue), var(--neon-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+}
+
+.app-subtitle {
+  color: #a0a0c0;
+}
+
+/* Input & Button */
+.form-control:focus {
+  background: #111;
+  color: #fff;
+  box-shadow: 0 0 15px var(--neon-blue);
+  border-color: var(--neon-blue);
+}
+
+.btn-gradient {
+  background: linear-gradient(45deg, var(--neon-purple), var(--neon-blue));
+  border: none;
+  box-shadow: 0 0 20px rgba(188, 19, 254, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.8);
+}
+
+/* Story Card */
+.story-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.image-overlay-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.story-image {
+  height: 350px;
+  object-fit: cover;
+}
